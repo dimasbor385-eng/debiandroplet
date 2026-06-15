@@ -23,6 +23,10 @@ RUN apt update && apt install -y \
     firefox-esr && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+
+RUN sudo apt-get install -y nodejs
+
 # Set root password
 RUN echo "root:wafahost256GB" | chpasswd
 
