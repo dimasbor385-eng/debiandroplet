@@ -27,8 +27,6 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 
 RUN sudo apt-get install -y nodejs
 
-RUN sudo apt install git
-
 # Set root password
 RUN echo "root:wafahost256GB" | chpasswd
 
