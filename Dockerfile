@@ -2,8 +2,6 @@ FROM debian:trixie
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN sudo apt update && upgrade
-
 RUN sudo apt install redis-server -y
 
 RUN dpkg --add-architecture i386
