@@ -2,8 +2,6 @@ FROM debian:trixie
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN sudo apt install redis-server -y
-
 RUN dpkg --add-architecture i386
 
 RUN apt update && apt install -y \
@@ -28,6 +26,8 @@ RUN apt update && apt install -y \
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 
 RUN sudo apt-get install -y nodejs
+
+RUN sudo apt install redis-server -y
 
 # Set root password
 RUN echo "root:wafahost256GB" | chpasswd
