@@ -28,9 +28,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 
 # Set root password
-RUN echo "admin:wafahost1122" | chpasswd
+RUN echo "root:wafahost1122" | chpasswd
 
-RUN sudo:usermod -aG sudo admin
+RUN sudo:usermod -aG sudo root
 
 RUN sed -i 's/^allowed_users=.*/allowed_users=anybody/' /etc/X11/Xwrapper.config || echo "allowed_users=anybody" >> /etc/X11/Xwrapper.config
 
