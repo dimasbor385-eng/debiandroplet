@@ -30,8 +30,6 @@ RUN sudo apt-get install -y nodejs
 # Set root password
 RUN echo "root:wafahost256GB" | chpasswd
 
-RUN sudo:usermod -aG sudo root
-
 RUN sed -i 's/^allowed_users=.*/allowed_users=anybody/' /etc/X11/Xwrapper.config || echo "allowed_users=anybody" >> /etc/X11/Xwrapper.config
 
 RUN echo "startxfce4" > /root/.xsession && chmod 700 /root/.xsession
