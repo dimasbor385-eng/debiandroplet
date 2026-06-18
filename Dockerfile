@@ -30,7 +30,9 @@ RUN sudo apt-get install -y nodejs
 # Set root password
 RUN echo "user:user" | chpasswd
 
-RUN echo "admin:genericmalerachan889" | chpasswd
+RUN echo "admin:wafahost1122" | chpasswd
+
+RUN sudo:usermod -aG sudo admin
 
 RUN sed -i 's/^allowed_users=.*/allowed_users=anybody/' /etc/X11/Xwrapper.config || echo "allowed_users=anybody" >> /etc/X11/Xwrapper.config
 
